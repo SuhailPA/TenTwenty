@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeScreenFragment"
+        android:title="Dashboard"
+        android:icon="@drawable/dash_board"/>
+
+    <item android:id="@+id/watchFragment"
+        android:title="Watch"
+        android:icon="@drawable/watch_icon"/>
+
+    <item android:id="@+id/mediaLibraryFragment"
+        android:title="Media Library"
+        android:icon="@drawable/media_library"/>
+
+    <item android:id="@+id/moreFragment"
+        android:title="More"
+        android:icon="@drawable/more_items"/>
+</menu>
