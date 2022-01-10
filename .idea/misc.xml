@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout-v21/detailed_fragment_layout.xml" value="0.2046875" />
+        <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout-v21/movie_item_layout.xml" value="0.1" />
         <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
+        <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/detailed_fragment_layout.xml" value="0.18489583333333334" />
+        <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/fragment_detailed.xml" value="0.2046875" />
         <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/fragment_home_screen.xml" value="0.1" />
         <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/fragment_media_library.xml" value="0.18854166666666666" />
         <entry key="..\:/Kotlin_Projects/First project/TenTwenty/app/src/main/res/layout/fragment_more.xml" value="0.2046875" />

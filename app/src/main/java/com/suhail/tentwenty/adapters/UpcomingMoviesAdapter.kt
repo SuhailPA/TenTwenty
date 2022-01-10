@@ -9,11 +9,14 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.size.Scale
 import coil.transform.RoundedCornersTransformation
 import com.suhail.tentwenty.R
 import com.suhail.tentwenty.data.Result
 
 class UpcomingMoviesAdapter : RecyclerView.Adapter<UpcomingMoviesAdapter.ViewHolderClass>() {
+
+    private var itemClickListner: ((Result) -> Unit)? = null
 
     inner class ViewHolderClass(view: View) : RecyclerView.ViewHolder(view) {
         val moviePoster: ImageView = view.findViewById(R.id.itemMoviePoster)
@@ -42,14 +45,25 @@ class UpcomingMoviesAdapter : RecyclerView.Adapter<UpcomingMoviesAdapter.ViewHol
     }
 
     override fun onBindViewHolder(holder: UpcomingMoviesAdapter.ViewHolderClass, position: Int) {
-
         val movieItem = differ.currentList[position]
-
         holder.movieName.text = movieItem.originalTitle
         holder.moviePoster.load("https://image.tmdb.org/t/p/w500${movieItem.backdropPath}") {
-            transformations(RoundedCornersTransformation(30f))
-
+            transformations(RoundedCornersTransformation(20f))
+            scale(Scale.FILL)
+            error(R.drawable.media_library)
         }
+        holder.itemView.setOnClickListener {
+            itemClickListner?.let {
+                movieItem?.let { it1 ->
+                    it(it1)
+                }
+            }
+        }
+
+    }
+
+    fun setOnClickListener(listner: (Result) -> Unit) {
+        itemClickListner = listner
     }
 
     override fun getItemCount(): Int {

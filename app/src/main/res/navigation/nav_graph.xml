@@ -7,9 +7,13 @@
 
     <fragment
         android:id="@+id/homeScreenFragment"
-        android:name="com.suhail.tentwenty.ui.HomeScreenFragment"
+        android:name="com.suhail.tentwenty.ui.home.HomeScreenFragment"
         android:label="fragment_home_screen"
-        tools:layout="@layout/fragment_home_screen" />
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/watchFragment"
         android:name="com.suhail.tentwenty.ui.WatchFragment"
@@ -25,4 +29,13 @@
         android:name="com.suhail.tentwenty.ui.MediaLibraryFragment"
         android:label="fragment_media_library"
         tools:layout="@layout/fragment_media_library" />
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="com.suhail.tentwenty.ui.home.DetailedFragment"
+        android:label="fragment_detailed"
+        tools:layout="@layout/fragment_detailed">
+        <argument
+            android:name="movieDetails"
+            app:argType="com.suhail.tentwenty.data.Result" />
+    </fragment>
 </navigation>
